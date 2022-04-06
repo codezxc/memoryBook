@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>回忆之书 by zxc</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./book.png" type="image/x-icon"> 
+  <img src="./fullscreen.svg" style= "position: absolute; width:20px;height: 20px;top:20px;right:20px;cursor: pointer;" alt="" onclick="toggleFullScreen()">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="imgLoader"></div>
+<div id="gradient">
+<div class="container" >
+
+  <h1 class="title">
+    Turning pages<br>with zxc's power
+  </h1>
+<!--  你 无 法 打 断 它 的 施 法 过 程 -->
+  <div class="credit">
+    * You cannot interrupt its casting process
+  </div>
+
+  <div class="book">
+    <div class="gap"></div>
+    <div class="pages">
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+    </div>
+    <div class="flips">
+      <div class="flip flip1">
+        <div class="flip flip2">
+          <div class="flip flip3">
+            <div class="flip flip4">
+              <div class="flip flip5">
+                <div class="flip flip6">
+                  <div class="flip flip7"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  //全屏
+  function toggleFullScreen() {
+            if (!document.fullscreenElement && // alternative standard method
+                !document.mozFullScreenElement && !document.webkitFullscreenElement) {// current working methods
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) {
+                    document.documentElement.mozRequestFullScreen();
+                } else if (document.documentElement.webkitRequestFullscreen) {
+                    document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            } else {
+                if (document.cancelFullScreen) {
+                    document.cancelFullScreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitCancelFullScreen) {
+                    document.webkitCancelFullScreen();
+                }
+            }
+        }
+</script>
